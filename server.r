@@ -22,6 +22,7 @@ shinyServer(
     
     #Classification of BMI using if - else statements
     output$conclusion <- renderText({
+    if(input$id1 != 0)
       if((as.integer(input$id4) / as.integer(input$id3 * input$id3)* 10000) < 18) "You may be clinically underweight. Please consider contacting a medical professional. Being underweight can be very dangerous."
       else if((as.integer(input$id4) / as.integer(input$id3 * input$id3)* 10000) > 18 & (as.integer(input$id4) / as.integer(input$id3 * input$id3)* 10000) <= 18.6) "You might be slightly underweight. Please consider changing your diet and excercise routines accordingly. /n Being Slightly underweight is nothing to worry about though, as long as it doesn�t become worse"
       else if((as.integer(input$id4) / as.integer(input$id3 * input$id3)* 10000) > 18.6 &(as.integer(input$id4) / as.integer(input$id3 * input$id3)* 10000) <= 25) "Your body is healthy, at least weightwise. Congratulations! Keep taking care of your body."
