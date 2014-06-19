@@ -48,10 +48,7 @@ The application was very simple, befitting a first-time shiny application. The d
 
 Height * (weight squared)
 
-This gives us the raw version.
-
 So, let's say I weigh 59kg and my height is 165cm. That would mean
-
 
 ```r
 59/(165^2)
@@ -61,7 +58,6 @@ So, let's say I weigh 59kg and my height is 165cm. That would mean
 ## [1] 0.002167
 ```
 Which, when multiplied appropriately, comes to a BMI of about 21.7, which is healthy.
-
 
 After this, the application checks if the user is 18 or younger and notifies, that the BMI is not accurate at this age.
 
@@ -83,7 +79,6 @@ over 30 clinical obesity
 
 so, as our earlier example shows:
 
-
 ```r
 BMI = 21.7
 
@@ -94,7 +89,7 @@ if(BMI > 18 & BMI < 25) "Your body is healthy, at least weightwise. Congratulati
 ## [1] "Your body is healthy, at least weightwise. Congratulations! Keep taking care of your body."
 ```
 
-Which is the basic operational model the application uses.
+---
 
 ## Why it is good
 
