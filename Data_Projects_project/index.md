@@ -13,39 +13,43 @@ knit        : slidify::knit2slides
 
 ## Table of Content
 
-1. What I wanted to do
-2. what I did
-3. How I did it
+1. Basic idea of application
+2. How to use it
+3. How it was made
 
 --- .class #id 
 
-## What I wanted to do
+## Basic Idea of Application
 
 The shinyapp I decided to make was a very simple BMI(Body Mass Index) calculator.
 The user would input their age, weight, height and sex and the app would calculate the BMI and show the results.
 
-So, as inputs, we would have numeric inputs and a set of radio buttons.
-As feedback, we would have text, maybe a plot, if I can manage it.
+The program would react to certain elements, like age and sex. The application would also give the user a classification od their BMI, ranging from underweight to overweight, accroding to the general limits.
 
 ---
 
-## What I did
+## How to use it
 
-The program is quite simple. I set up input fields in the side bar for all of the different variables and set them to be at a default of 0.
+The program is quite simple. On the sidebar of the page, there are three numeric input boxes and a pair or radio buttons. The numeric boxes represent age, height and weight respectively. The radio buttons represent sex.
 
-When the Submit button is pressed, the app calculates the BMI and reacts.
+This data is filled and then submitted via a Submit - button.
 
-I could not for the life of me make a proper plot, so that had to go.
-I also couldn´t find a way to react to the selected sex.
+The data is calculated and the user is given his/her BMI, a notification if needed and a classification of her/his BMI.
 
-The app can react to age(if someone is under 18) and can react to the different levels of BMI  (underweight to overweight ).
+Very easy, very simple.
 
 ---
 
-## How I did it
+## How it was made
 
-The calculations I did with a simple equation, which is just "height divided by Weight squared".
+The application was very simple, befitting a first-time shiny application. The data is collected from the user input and calculated using the basic BMI formula, which is
 
-The reactivity to the calculated BMI I did with a cluster of If- else sections, meaning I would check the BMI against set values. 18 or under was clinically underweight, 18.1 to 18.6 was slightly slim and so on and so forth
+Height * (weight squared)
 
-In total, the whole app was about 40 rows of code.
+This gives us the raw version.
+
+After this, the application checks if the user is 18 or younger and notifies, that the BMI is not accurate at this age.
+
+Finally, using a simple set of if - else statements, the BMI is classified and the user is given simple feedback.
+
+---

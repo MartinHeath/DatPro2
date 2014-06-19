@@ -47,9 +47,9 @@
   </hgroup>
   <article data-timings="">
     <ol>
-<li>What I wanted to do</li>
-<li>what I did</li>
-<li>How I did it</li>
+<li>Basic idea of application</li>
+<li>How to use it</li>
+<li>How it was made</li>
 </ol>
 
   </article>
@@ -58,14 +58,13 @@
 
 <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>What I wanted to do</h2>
+    <h2>Basic Idea of Application</h2>
   </hgroup>
   <article data-timings="">
     <p>The shinyapp I decided to make was a very simple BMI(Body Mass Index) calculator.
 The user would input their age, weight, height and sex and the app would calculate the BMI and show the results.</p>
 
-<p>So, as inputs, we would have numeric inputs and a set of radio buttons.
-As feedback, we would have text, maybe a plot, if I can manage it.</p>
+<p>The program would react to certain elements, like age and sex. The application would also give the user a classification od their BMI, ranging from underweight to overweight, accroding to the general limits.</p>
 
   </article>
   <!-- Presenter Notes -->
@@ -73,17 +72,16 @@ As feedback, we would have text, maybe a plot, if I can manage it.</p>
 
 <slide class="" id="slide-3" style="background:;">
   <hgroup>
-    <h2>What I did</h2>
+    <h2>How to use it</h2>
   </hgroup>
   <article data-timings="">
-    <p>The program is quite simple. I set up input fields in the side bar for all of the different variables and set them to be at a default of 0.</p>
+    <p>The program is quite simple. On the sidebar of the page, there are three numeric input boxes and a pair or radio buttons. The numeric boxes represent age, height and weight respectively. The radio buttons represent sex.</p>
 
-<p>When the Submit button is pressed, the app calculates the BMI and reacts.</p>
+<p>This data is filled and then submitted via a Submit - button.</p>
 
-<p>I could not for the life of me make a proper plot, so that had to go.
-I also couldn´t find a way to react to the selected sex.</p>
+<p>The data is calculated and the user is given his/her BMI, a notification if needed and a classification of her/his BMI.</p>
 
-<p>The app can react to age(if someone is under 18) and can react to the different levels of BMI  (underweight to overweight ).</p>
+<p>Very easy, very simple.</p>
 
   </article>
   <!-- Presenter Notes -->
@@ -91,15 +89,26 @@ I also couldn´t find a way to react to the selected sex.</p>
 
 <slide class="" id="slide-4" style="background:;">
   <hgroup>
-    <h2>How I did it</h2>
+    <h2>How it was made</h2>
   </hgroup>
   <article data-timings="">
-    <p>The calculations I did with a simple equation, which is just &quot;height divided by Weight squared&quot;.</p>
+    <p>The application was very simple, befitting a first-time shiny application. The data is collected from the user input and calculated using the basic BMI formula, which is</p>
 
-<p>The reactivity to the calculated BMI I did with a cluster of If- else sections, meaning I would check the BMI against set values. 18 or under was clinically underweight, 18.1 to 18.6 was slightly slim and so on and so forth</p>
+<p>Height * (weight squared)</p>
 
-<p>In total, the whole app was about 40 rows of code.</p>
+<p>This gives us the raw version.</p>
 
+<p>After this, the application checks if the user is 18 or younger and notifies, that the BMI is not accurate at this age.</p>
+
+<p>Finally, using a simple set of if - else statements, the BMI is classified and the user is given simple feedback.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <article data-timings="">
+    
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -116,20 +125,26 @@ I also couldn´t find a way to react to the selected sex.</p>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='What I wanted to do'>
+        data-slide=2 title='Basic Idea of Application'>
          2
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='What I did'>
+        data-slide=3 title='How to use it'>
          3
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='How I did it'>
+        data-slide=4 title='How it was made'>
          4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title=''>
+         5
       </a>
     </li>
   </ul>
