@@ -2,7 +2,7 @@
 title       : A Body Mass Index calculator
 subtitle    : data products project summer 2014
 author      : Martin Heath
-job         : Studen of Computer scienci in Tampere university
+job         : Studen of Computer science in Tampere university
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
