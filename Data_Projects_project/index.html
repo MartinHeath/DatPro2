@@ -34,7 +34,7 @@
   <hgroup class="auto-fadein">
     <h1>A Body Mass Index calculator</h1>
     <h2>data products project summer 2014</h2>
-    <p>Martin Heath<br/>Studen of Computer science in Tampere university</p>
+    <p>Martin Heath<br/>Student of Computer science in Tampere university</p>
   </hgroup>
   <article></article>  
 </slide>
@@ -49,7 +49,9 @@
     <ol>
 <li>Basic idea of application</li>
 <li>How to use it</li>
-<li>How it was made</li>
+<li>How it was made</li>
+<li>The classification of BMI</li>
+<li>Why it is good</li>
 </ol>
 
   </article>
@@ -61,10 +63,10 @@
     <h2>Basic Idea of Application</h2>
   </hgroup>
   <article data-timings="">
-    <p>The shinyapp I decided to make was a very simple BMI(Body Mass Index) calculator.
+    <p>The shiny app I decided to make was a very simple BMI(Body Mass Index) calculator.
 The user would input their age, weight, height and sex and the app would calculate the BMI and show the results.</p>
 
-<p>The program would react to certain elements, like age and sex. The application would also give the user a classification od their BMI, ranging from underweight to overweight, accroding to the general limits.</p>
+<p>The program would react to certain elements, like age and sex. The application would also give the user a classification of their BMI, ranging from underweight to overweight, according to the general limits.</p>
 
   </article>
   <!-- Presenter Notes -->
@@ -98,6 +100,16 @@ The user would input their age, weight, height and sex and the app would calcula
 
 <p>This gives us the raw version.</p>
 
+<p>So, let&#39;s say I weigh 59kg and my height is 165cm. That would mean</p>
+
+<pre><code class="r">59/(165^2)
+</code></pre>
+
+<pre><code>## [1] 0.002167
+</code></pre>
+
+<p>Which, when multiplied appropriately, comes to a BMI of about 21.7, which is healthy.</p>
+
 <p>After this, the application checks if the user is 18 or younger and notifies, that the BMI is not accurate at this age.</p>
 
 <p>Finally, using a simple set of if - else statements, the BMI is classified and the user is given simple feedback.</p>
@@ -107,8 +119,40 @@ The user would input their age, weight, height and sex and the app would calcula
 </slide>
 
 <slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>BMI Classification</h2>
+  </hgroup>
   <article data-timings="">
-    
+    <p>The body mass index, or BMI, is a widely used method of measuring weight. Though it cannot be seen as hard science. It is slightly inaccurate and can only provide loose concepts of weight limits. However, this simplicity is what makes it great. Anyone can easily and quicly calculate their BMI and act accordingly.</p>
+
+<p>In this application, the limits are as follows:</p>
+
+<p>under 18 = Clinical underweight
+18 - 18.5 = slightly underweight
+18 - 25 = Normal BMI, healthy
+25 - 30 = slightly overweight
+over 30 clinical obesity</p>
+
+<p>so, as our earlier example shows:</p>
+
+<pre><code class="r">BMI = 21.7
+
+if(BMI &gt; 18 &amp; BMI &lt; 25) &quot;Your body is healthy, at least weightwise. Congratulations! Keep taking care of your body.&quot;
+</code></pre>
+
+<pre><code>## [1] &quot;Your body is healthy, at least weightwise. Congratulations! Keep taking care of your body.&quot;
+</code></pre>
+
+<p>Which is the basic operational model the application uses.</p>
+
+<h2>Why it is good</h2>
+
+<p>A lot of health magazines and websites mention BMI and a few professional medical sites use it as well. </p>
+
+<p>An easy and simple app can add alot to these sites, letting users try it out and maybe learn something about their health.</p>
+
+<p>The app is very universal and can be easily assimilated into any site or program. The program can also utilise plots or perhaps a link to a help service, if your BMI is looking worrisom.</p>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -143,7 +187,7 @@ The user would input their age, weight, height and sex and the app would calcula
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title=''>
+        data-slide=5 title='BMI Classification'>
          5
       </a>
     </li>
