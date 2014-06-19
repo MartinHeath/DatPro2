@@ -82,11 +82,12 @@ so, as our earlier example shows:
 ```r
 BMI = 21.7
 
-if(BMI > 18 & BMI < 25) "Your body is healthy, at least weightwise. Congratulations! Keep taking care of your body."
+if(BMI > 18 & BMI < 25) 
+  "Your body is healthy, at least weightwise. Congratulations!"
 ```
 
 ```
-## [1] "Your body is healthy, at least weightwise. Congratulations! Keep taking care of your body."
+## [1] "Your body is healthy, at least weightwise. Congratulations!"
 ```
 
 ---
